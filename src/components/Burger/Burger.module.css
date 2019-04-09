@@ -5,7 +5,11 @@
     text-align: center;
     font-weight: bold;
     font-size: 1.2rem;
-    overflow-y: scroll;
+    overflow: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0;
 }
 
 @media (min-width: 1000px) and (min-height: 700px) {
