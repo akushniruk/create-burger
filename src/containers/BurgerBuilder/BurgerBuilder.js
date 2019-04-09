@@ -85,6 +85,16 @@ class BurdgerBuilder extends Component {
         })
     }
 
+    purchaseCancelHandler = () => {
+        this.setState({
+            purchasing: false
+        })
+    }
+
+    purchaseContinueHandler = () => {
+        alert('DONE');
+    }
+
     render() {
         const disabledInfo = {
             ...this.state.ingredients
@@ -94,10 +104,12 @@ class BurdgerBuilder extends Component {
         }
         return (
             <Auxillary>
-                <Modal show={this.state.purchasing}>
+                <Modal show={this.state.purchasing} modalClose={this.purchaseCancelHandler}>
                     <OrderSummary
                         ingredients={this.state.ingredients}
                         price={this.state.totalPrice}
+                        purchaseCancel={this.purchaseCancelHandler}
+                        purchaseContinue={this.purchaseContinueHandler}
                     />
                 </Modal>
                 <Burger ingredients={this.state.ingredients} />
