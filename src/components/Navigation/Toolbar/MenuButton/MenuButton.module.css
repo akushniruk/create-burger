@@ -1,0 +1,11 @@
+.MenuButton{
+    margin: 8px 0;
+}
+
+.MenuButton div{
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+    cursor: pointer;
+}
